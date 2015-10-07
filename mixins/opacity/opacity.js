@@ -21,7 +21,7 @@ opacity.ms = function opacity(value) {
 opacity.result = {
   ms: {
     property: 'filter',
-    prefixed: false,
+    prefixed: true,
   }
 }
 
@@ -40,7 +40,7 @@ opacity.prependCSS = {
 opacity.vendors = ['ms', 'webkit', 'moz'];
 
 // Don't want ms filter syntax by default
-opacity.vendors.ms = false;
+opacity.vendors.ms = true;
 
 /**
  * Export mixin

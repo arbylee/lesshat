@@ -6,7 +6,7 @@
 // Handcrafted by Petr Brzek, lesshat.com
 // Works great with CSS Hat csshat.com
 
-// version: v3.0.2 (2015-03-19)
+// version: v3.0.2 (2015-10-07)
 
 // TABLE OF MIXINS:
 	// align-content
@@ -515,7 +515,7 @@
 .opacity(...) {
   @process_ms: ~`(function(e){return e=e||"filter: alpha(opacity=100)","alpha(opacity="+Math.floor(100*e)+")"})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
   @process: ~`(function(e){return e=e||"1"})((function(){var e="@{arguments}";return e=e.replace(/^\[|\]$/g,"")})())`;
-   zoom: 1; filter: @process_ms;
+   zoom: 1; -ms-filter: @process_ms;
   -webkit-opacity: @process;
   -moz-opacity: @process;
   opacity: @process;
